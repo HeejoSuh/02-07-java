@@ -15,7 +15,8 @@ public class Truck extends Vehicle {
 	
 	public Truck(String plate, String colour) throws Exception {
 		super(plate, colour); 
-		super.setNumberOfDoors(2);
+		 _numberOfDoors = 2;
+		 _numberOfTires = 8;
 		
 	}
 
