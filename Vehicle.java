@@ -28,7 +28,7 @@ public class Vehicle {
 	 * 
 	 * private-----------
 	 * The class/variable/method is accessible and available within 
-	 * this class only. Used for ìbackgroundî work inside of the class
+	 * this class only. Used for ‚Äúbackground‚Äù work inside of the class
 	 * 
 	 * protected--------
 	 * Any code inside of the class can see them, but no outside object can use them. 
@@ -44,6 +44,7 @@ public class Vehicle {
 	protected String _licensePlateNumber;
 	protected String _colour;
 	protected int _numberOfDoors;
+	protected int _numberOfTires = 4;
 	//start at rest, always have speed limit
 	protected double _speed = 0;
 	protected double _maximumSpeed = 300;
@@ -114,7 +115,11 @@ public class Vehicle {
 		//returns the number of doors
 		return _numberOfDoors;
 	}
-
+	//-------------//Tire
+		protected int getNumberOfTires() { 
+			//returns the number of doors
+			return _numberOfTires;
+		}
 	//-------------//SPEED
 	protected Double getSpeed() { 
 		//returns the speed
@@ -127,7 +132,7 @@ public class Vehicle {
 	protected String All() { 
 		//returns the basic info status about the vehicle
 
-		return ("License plate:"+_licensePlateNumber +"\nColour:"+_colour +"\nNumber of doors:"+_numberOfDoors+"\nSpeed:"+_speed+"km/h");
+		return ("License plate:"+_licensePlateNumber +"	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Number of tires:"+_numberOfTires+"	Speed:"+_speed+"km/h");
 	}		
 
 	//--------------------------------------------------------
@@ -155,7 +160,12 @@ public class Vehicle {
 		//sets the number of doors
 		_numberOfDoors = newDoorCount;
 	}
-	
+
+	//-------------//Tires
+	protected void setNumberOfTires(int newTireCount) { 
+		//sets the number of doors
+		_numberOfTires = newTireCount;
+	}
 	//----------------------- ACCELERATE
 	protected void Accelerate(double accelerateAmount) {
 		//Accelerate the speed by input
@@ -181,5 +191,3 @@ public class Vehicle {
 
 	//--------------------------------------------------------
 }//closing for class
-
-		
