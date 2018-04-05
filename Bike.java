@@ -17,7 +17,6 @@ public class Bike extends Vehicle {
 		 
 		 _licensePlateNumber= "";
 		 _numberOfDoors= 0;
-		 _numberOfTires = 2;
 		 _maximumSpeed = 20;			
 			
 		//super.setLicensePlate("");
@@ -35,7 +34,7 @@ public class Bike extends Vehicle {
 	
 
 	protected String All() {
-		return ("	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Number of tires:"+_numberOfTires+"	Speed:"+_speed+"km/h");
+		return ("	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Speed:"+_speed+"km/h");
 	}
 	
 }
