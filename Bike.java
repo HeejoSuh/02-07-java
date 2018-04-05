@@ -9,28 +9,36 @@
 
 //Jet is the sub-class of Vehicle
 public class Bike extends Vehicle {
-	//Jet inherits all of Airplane's behaviour to use for its own
-	
-	public static final double MULTIPLIER = 0.8; //less speed
-	
-	
-	//subclass can add its own variables to the ones that it inherits from Airplane 
+	//class for bike
 	
 	public Bike(String plate, String colour) throws Exception {
-		 super(plate, colour); //refers to class this class has inherited behaviour from
-		//this calls the constructor of Airplane
-		super.setNumberOfDoors(0);
+		 super(plate, colour);
+		//Constructor override
+		 
+		 _licensePlateNumber= "";
+		 _numberOfDoors= 0;
+		 _numberOfTires = 2;
+		 _maximumSpeed = 20;			
+			
+		//super.setLicensePlate("");
+		//super.setNumberOfDoors(0);
+		//super.setNumberOfTires(2);
 	}
 	
 	public void Accelerate(double speed) {
-		//subclass can call superclass's methods, as well as changing its behaviour(OVERRIDING).
-		super.Accelerate(speed* MULTIPLIER);
+		super.Accelerate(speed);
 	}
 	
-	public void Deccelerate(double speed) {
-		super.Decelerate(_speed); //can also call it super.getSpeed()
+	public void Decelerate(double speed) {
+		super.Decelerate(_speed); //sudden break
 	}
 	
-	//eventhough not written
-	//getSpeed() can be used for Jet since it has inherited it from Airplane
+
+	protected String All() {
+		return ("	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Number of tires:"+_numberOfTires+"	Speed:"+_speed+"km/h");
+	}
+	
 }
+
+
+
