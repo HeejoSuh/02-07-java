@@ -44,7 +44,6 @@ public class Vehicle {
 	protected String _licensePlateNumber;
 	protected String _colour;
 	protected int _numberOfDoors;
-	protected int _numberOfTires = 4;
 	//start at rest, always have speed limit
 	protected double _speed = 0;
 	protected double _maximumSpeed = 300;
@@ -115,11 +114,6 @@ public class Vehicle {
 		//returns the number of doors
 		return _numberOfDoors;
 	}
-	//-------------//Tire
-		protected int getNumberOfTires() { 
-			//returns the number of doors
-			return _numberOfTires;
-		}
 	//-------------//SPEED
 	protected Double getSpeed() { 
 		//returns the speed
@@ -132,7 +126,7 @@ public class Vehicle {
 	protected String All() { 
 		//returns the basic info status about the vehicle
 
-		return ("License plate:"+_licensePlateNumber +"	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Number of tires:"+_numberOfTires+"	Speed:"+_speed+"km/h");
+		return ("License plate:"+_licensePlateNumber +"	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Speed:"+_speed+"km/h");
 	}		
 
 	//--------------------------------------------------------
@@ -159,12 +153,6 @@ public class Vehicle {
 	protected void setNumberOfDoors(int newDoorCount) { 
 		//sets the number of doors
 		_numberOfDoors = newDoorCount;
-	}
-
-	//-------------//Tires
-	protected void setNumberOfTires(int newTireCount) { 
-		//sets the number of doors
-		_numberOfTires = newTireCount;
 	}
 	//----------------------- ACCELERATE
 	protected void Accelerate(double accelerateAmount) {
