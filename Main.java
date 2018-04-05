@@ -24,14 +24,16 @@ public class Main {
 		//instantiate new vehicle
 		Bike Bike1 = new Bike("Plate", "Orange");
 		System.out.println("Number of doors: "+Bike1.getNumberOfDoors());
+		System.out.println("Speed: "+Bike1.getSpeed());
 		Bike1.Accelerate(5.0);
 		System.out.println("Speed: "+Bike1.getSpeed());
-		Bike1.Accelerate(10.2);
+		Bike1.Accelerate(10);
 		System.out.println("Speed: "+Bike1.getSpeed());
 		Bike1.Accelerate(100);
 		System.out.println("Speed: "+Bike1.getSpeed());
-		Bike1.Decelerate(100.0);
+		Bike1.Decelerate(1);
 		System.out.println("Speed: "+Bike1.getSpeed());
+		System.out.println(Bike1.All());
 		
 
 		//Truck 2
@@ -40,6 +42,7 @@ public class Main {
 		//Vehicle vehicle2 = new Vehicle();
 		Truck Truck2 = new Truck("POI0987", "Black");
 		System.out.println("Number of doors: "+Truck2.getNumberOfDoors());
+		System.out.println("Speed: "+Truck2.getSpeed());
 		Truck2.Accelerate(5.0);
 		System.out.println("Speed: "+Truck2.getSpeed());
 		Truck2.Accelerate(10.2);
@@ -48,5 +51,6 @@ public class Main {
 		System.out.println("Speed: "+Truck2.getSpeed());
 		Truck2.Decelerate(100.0);
 		System.out.println("Speed: "+Truck2.getSpeed());
+		System.out.println(Truck2.All());
 	}
 }
