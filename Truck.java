@@ -11,19 +11,18 @@
 public class Truck extends Vehicle {
 	//class for truck
 	
-	public static final double MULTIPLIER = 0.4; 
+	public static final double MultiplyBy = 0.4; 
 	
-	public Truck(String plate, String colour) throws Exception {
+	public Truck(String plate, String colour){
 		super(plate, colour); 
 		 _numberOfDoors = 2;
-		
 	}
 
-	public void Accelerate(double speed) {
-		super.Accelerate(speed*MULTIPLIER);
+	protected void Accelerate(double speed) {
+		super.Accelerate(speed*MultiplyBy);
 	}
 	
-	public void Decelerate(double speed) {
-		super.Decelerate(speed*MULTIPLIER); 
+	protected void Decelerate(double speed) {
+		super.Decelerate(speed*MultiplyBy); 
 	}
 }
