@@ -11,12 +11,11 @@
 public class Bike extends Vehicle {
 	//class for bike
 	
-	public Bike(String plate, String colour) throws Exception {
-		 super(plate, colour);
+	public Bike(String colour){
+		 super("", colour);
 		//Constructor override
-		 
-		 _licensePlateNumber= "";
 		 _numberOfDoors= 0;
+		 _numberOfTires = 2;
 		 _maximumSpeed = 20;			
 			
 		//super.setLicensePlate("");
@@ -24,20 +23,11 @@ public class Bike extends Vehicle {
 		//super.setNumberOfTires(2);
 	}
 	
-	public void Accelerate(double speed) {
-		super.Accelerate(speed);
-	}
-	
-	public void Decelerate(double speed) {
-		super.Decelerate(_speed); //sudden break
-	}
-	
 
 	protected String All() {
-		return ("	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Speed:"+_speed+"km/h");
+		return ("Colour:"+_colour +"\nNumber of doors:"+_numberOfDoors+"\nSpeed:"+_speed+"km/h"+"\nMaximum Speed:"+_maximumSpeed+"km/h");
 	}
 	
 }
-
 
 
