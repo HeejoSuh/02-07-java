@@ -44,12 +44,13 @@ public class Vehicle {
 	protected String _licensePlateNumber;
 	protected String _colour;
 	protected int _numberOfDoors;
+	protected int _numberOfTires = 4;
 	//start at rest, always have speed limit
 	protected double _speed = 0;
 	protected double _maximumSpeed = 300;
 
 	//private fields(read-only)
-	private String plateFormat = "[A-Z0-9]*"; //format only includes (A to Z) and (0 to 9)
+	//private String plateFormat = "[A-Z0-9]*"; //format only includes (A to Z) and (0 to 9)
 	/*
 	 					* other formatting method:
 	 * Matcher m = Pattern.compile("[A-Z][A-Z]([A-Z]|\\d)\\d\\d").matcher(input);
@@ -64,23 +65,6 @@ public class Vehicle {
 
 	//--------------------------------------------------------
 
-	//ERROR(custom)
-	public class UnavailablePlateException extends Exception {
-
-		//Default serialVersionUID
-		private static final long serialVersionUID = 1L;
-
-		public UnavailablePlateException() {
-	    	  //Default constructor
-	    }
-
-	    public UnavailablePlateException(String message) {
-	    	//exception show message
-	        super(message);
-	    }
-	}
-	//--------------------------------------------------------
-	
 	//Java doesn't allow optional parameters with default values in constructors/methods
 	//so have to write twice.
 	//public Vehicle() throws Exception {
@@ -88,7 +72,7 @@ public class Vehicle {
 		//this("ABCD123", "White"); //can just use 'this' since know it's in correct format
 	//}
 	
-	public Vehicle(String plate, String colour) throws Exception {
+	public Vehicle(String plate, String colour) {
 		//Constructor for vehicle class
 
 		this.setLicensePlate(plate);
@@ -126,14 +110,14 @@ public class Vehicle {
 	protected String All() { 
 		//returns the basic info status about the vehicle
 
-		return ("License plate:"+_licensePlateNumber +"	Colour:"+_colour +"	Number of doors:"+_numberOfDoors+"	Speed:"+_speed+"km/h");
-	}		
+		return ("License plate:"+_licensePlateNumber +"\nColour:"+_colour +"\nNumber of doors:"+_numberOfDoors+"\nSpeed:"+_speed+"km/h"+"\nMaximum Speed:"+_maximumSpeed+"km/h");
+	}
 
 	//--------------------------------------------------------
 	//setter 
 	
 	//-------------//LICENSE PLATE
-	protected void setLicensePlate(String newPlate) throws Exception { 
+	protected void setLicensePlate(String newPlate){ 
 		//sets the license plate number
 		
 		//if(newPlate.length() == 7 && newPlate.matches(plateFormat)) {
@@ -154,6 +138,7 @@ public class Vehicle {
 		//sets the number of doors
 		_numberOfDoors = newDoorCount;
 	}
+
 	//----------------------- ACCELERATE
 	protected void Accelerate(double accelerateAmount) {
 		//Accelerate the speed by input
